@@ -1,0 +1,119 @@
+@import "7to1/1utils/variables";
+@import "7to1/1utils/mixins";
+@import "7to1/3base/global";
+
+.header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    &__logo{
+        width: 160px;
+    }
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.118);
+}
+
+.research{
+    &__location{
+        background-color: $color-grey-1;
+        display: flex;
+        justify-content: center;
+        height: 44px;
+        &__icon{
+            margin-right: 20px;
+            line-height: 40px;
+        }
+        &__text{
+            line-height: 44px;
+            font-weight: 500;
+            font-size: 15px;
+        }
+    }
+    &__explorer{
+        background-color: $color-grey-2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 250px;
+
+        &__title{
+            font-size: 22px;
+            text-align: center;
+            width: 70%;
+            margin-left: 16%;
+            margin-top: 30px;
+        }
+
+        &__text{
+            font-weight: 300;
+            font-size: 15px;
+            text-align: center;
+            margin-left: 6%;
+            padding-top: 18px
+        }
+
+        &__btn{
+            @include purple-pink;
+            border: 0;
+            box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.175);
+            border-radius: 20px;
+            width: 190px;
+            margin: auto;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 14px;
+            margin-top: 20px;
+            & a{
+                color: white;
+            }
+        }
+    }
+}
+
+.working{
+    @include flex-column;
+    padding:40px 0px 40px 0px;
+
+    &__title{
+        font-size: 24px;
+        margin-bottom: 20px;
+        margin-left: 14px;
+    }
+
+    &__box{
+        @include flex-column;
+        width: 85%;
+        margin:auto;
+
+        &__btn{
+            background-color: $color-grey-2;
+            padding: 22px;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 22px;
+            position: relative;
+            text-align: center;
+            & span{
+                position: absolute;
+                left: -6px;
+                display:inline-block;
+                background-color: $color-primary;
+                color: white;
+                border: 0 solid wheat;
+                border-radius: 12px;
+                width: 18px;
+                height: 18px;
+                text-align: center;  
+            }
+            & i{
+                position: absolute;
+                left: 30px;
+            }
+            
+
+            
+        }
+    }
+}

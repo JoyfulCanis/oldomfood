@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  font-family: Roboto;
+}
+
+body {
+  width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.118);
+}
+.header__logo {
+  width: 160px;
+}
+
+.research__location {
+  background-color: rgba(128, 128, 128, 0.167);
+  display: flex;
+  justify-content: center;
+  height: 44px;
+}
+.research__location__icon {
+  margin-right: 20px;
+  line-height: 40px;
+}
+.research__location__text {
+  line-height: 44px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.research__explorer {
+  background-color: rgba(177, 177, 177, 0.116);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 250px;
+}
+.research__explorer__title {
+  font-size: 22px;
+  text-align: center;
+  width: 70%;
+  margin-left: 16%;
+  margin-top: 30px;
+}
+.research__explorer__text {
+  font-weight: 300;
+  font-size: 15px;
+  text-align: center;
+  margin-left: 6%;
+  padding-top: 18px;
+}
+.research__explorer__btn {
+  background: linear-gradient(#9356DC, #FF79DA);
+  border: 0;
+  box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.175);
+  border-radius: 20px;
+  width: 190px;
+  margin: auto;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px;
+  margin-top: 20px;
+}
+.research__explorer__btn a {
+  color: white;
+}
+
+.working {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0px 40px 0px;
+}
+.working__title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-left: 14px;
+}
+.working__box {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: auto;
+}
+.working__box__btn {
+  background-color: rgba(177, 177, 177, 0.116);
+  padding: 22px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 22px;
+  position: relative;
+  text-align: center;
+}
+.working__box__btn span {
+  position: absolute;
+  left: -6px;
+  display: inline-block;
+  background-color: #9356DC;
+  color: white;
+  border: 0 solid wheat;
+  border-radius: 12px;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+}
+.working__box__btn i {
+  position: absolute;
+  left: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
