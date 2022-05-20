@@ -21,7 +21,6 @@ a {
 .header {
   display: flex;
   justify-content: center;
-  width: 100%;
   padding: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.118);
 }
@@ -35,14 +34,13 @@ a {
   justify-content: center;
   height: 44px;
 }
-.research__location__icon {
-  margin-right: 20px;
-  line-height: 40px;
-}
 .research__location__text {
   line-height: 44px;
   font-weight: 500;
   font-size: 15px;
+}
+.research__location__icon {
+  margin-right: 20px;
 }
 .research__explorer {
   background-color: rgba(177, 177, 177, 0.116);
@@ -81,6 +79,10 @@ a {
   color: white;
 }
 
+#research-icon {
+  line-height: 42px;
+}
+
 .working {
   display: flex;
   flex-direction: column;
@@ -97,7 +99,7 @@ a {
   width: 85%;
   margin: auto;
 }
-.working__box__btn {
+.working__box__li {
   background-color: rgba(177, 177, 177, 0.116);
   padding: 22px;
   font-size: 15px;
@@ -107,8 +109,9 @@ a {
   border-radius: 22px;
   position: relative;
   text-align: center;
+  box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.175);
 }
-.working__box__btn span {
+.working__box__li span {
   position: absolute;
   left: -6px;
   display: inline-block;
@@ -120,9 +123,108 @@ a {
   height: 18px;
   text-align: center;
 }
-.working__box__btn i {
+.working__box__li i {
   position: absolute;
   left: 30px;
+}
+
+.main-box {
+  background-color: rgba(177, 177, 177, 0.116);
+  display: flex;
+  flex-direction: column;
+}
+.main-box__title {
+  margin-left: 20px;
+  padding-top: 50px;
+}
+.main-box__sub-box {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0px 30px 0px;
+}
+
+.main-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.175);
+  align-self: center;
+  margin-bottom: 30px;
+  width: 90%;
+  height: 240px;
+  background-color: white;
+  border-radius: 16px;
+  position: relative;
+}
+.main-card a {
+  width: 100%;
+}
+.main-card__img {
+  width: 100%;
+  object-fit: cover;
+  object-position: 10% 60%;
+  border-radius: 16px 16px 0px 0px;
+  height: 170px;
+}
+.main-card__box {
+  position: relative;
+}
+.main-card__box__like {
+  position: absolute;
+  right: 28px;
+  top: 28px;
+}
+.main-card__text-box {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+}
+.main-card__title {
+  font-size: 17px;
+}
+.main-card__title-2 {
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 5px;
+}
+.main-card__new {
+  background-color: #99E2D0;
+  position: absolute;
+  right: 12px;
+  top: 14px;
+  padding: 6px 10px 6px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 2px;
+  color: #278870;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(56, 56, 56);
+  padding: 20px 0px 26px 24px;
+}
+.footer__title {
+  color: white;
+  font-family: Shrikhand;
+  font-weight: 400;
+  font-size: 18px;
+}
+.footer__ul {
+  padding-top: 18px;
+}
+.footer__li {
+  font-size: 15px;
+  padding-bottom: 6px;
+}
+.footer__li a {
+  color: white;
+}
+.footer__icon {
+  display: inline-block;
+  width: 6px;
+  padding-right: 16px;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;600&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand:wght@100;600&family=Shrikhand:wght@400&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/0375098d7a.js" crossorigin="anonymous"></script>
         <title>Ohmyfood!</title>
     </head>
@@ -18,7 +19,7 @@
         
         <section class="research">
             <div class="research__location">
-                <i class="fa-solid fa-location-dot research__location__icon "></i>
+                <i class="fa-solid fa-location-dot research__location__icon" id="research-icon"></i>
                 <adress class="research__location__text">Paris, Belleville</adress>
             </div>
             <div class="research__explorer">
@@ -31,73 +32,82 @@
         <section class="working">
             <h2 class="working__title">Fonctionnement</h2>
             <ol class="working__box">
-                <li class="working__box__btn"><span>1</span><i class="fa-solid fa-mobile-screen-button"></i>
-                Choisissez un restaurant</button>
-                <li class="working__box__btn"><span>2</span><i class="fa-solid fa-list"></i>
-                Composez votre menu</button>
-                <li class="working__box__btn"><span>3</span><i class="fa-solid fa-store"></i>
-                Dégustez au restaurant</button>
+                <li class="working__box__li"><span>1</span><i class="fa-solid fa-mobile-screen-button"></i>
+                Choisissez un restaurant</li>
+                <li class="working__box__li"><span>2</span><i class="fa-solid fa-list"></i>
+                Composez votre menu</li>
+                <li class="working__box__li"><span>3</span><i class="fa-solid fa-store"></i>
+                Dégustez au restaurant</li>
             </ol>
         </section>
         
-        <section class="restaurants">
-            <h2 class="restaurants__title">Restaurants</h2>
-            <div class="restaurant__box">
-                <article class="restaurant__box__card">
-                    <img src="images/restaurants/menilmontant.jpg" alt="photographie d'un plat durant le repas"></img>
-                    <div>
-                        <div>
-                            <h3>La palette du goût</h3>
-                            <h4>Ménilmontant</h4>
+        <section class="main-box">
+            <h2 class="main-box__title">Restaurants</h2>
+            <div class="main-box__sub-box">
+
+                <article class="main-card">
+                    
+                    <a><img class="main-card__img" src="images/restaurants/menilmontant.jpg" alt="photographie d'un plat durant le repas"></a>
+                    
+                    <div class="main-card__box">
+                        <div class="main-card__text-box">
+                            <h3 class="main-card__title">La palette du goût</h3>
+                            <h4 class="main-card__title-2">Ménilmontant</h4>
                         </div>
-                        <i class="fa-solid fa-heart"></i>
+                        <i class="main-card__box__like fa-regular fa-heart fa-lg"></i>
                     </div>
-                    <span>Nouveau</span>
+
+                    <p class="main-card__new">Nouveau</p>
+
                 </article>
 
-                <article>
-                    <img src="images/restaurants/charonne.jpg" alt="photographie d'un plat vu du dessus"><span>Nouveau</span></img>
-                    <div>
-                        <div>
-                            <h3>La note enchantée</h3>
-                            <h4>Charonne</h4>
+                <article class="main-card">
+                    <a><img class="main-card__img" src="images/restaurants/charonne.jpg" alt="photographie d'un plat vu du dessus"></a>
+                    <div class="main-card__box">
+                        <div class="main-card__text-box">
+                            <h3 class="main-card__title">La note enchantée</h3>
+                            <h4 class="main-card__title-2">Charonne</h4>
                         </div>
-                        <i class="fa-solid fa-heart"></i>
+                        <i class="main-card__box__like fa-regular fa-heart fa-lg"></i>
                     </div>
+
+                    <p class="main-card__new">Nouveau</p>
                 </article>
 
-                <article>
-                    <img src="images/restaurants/cité-rouge.jpg" alt="photographie d'un plat"><span>Nouveau</span></img>
-                    <div>
-                        <div>
-                            <h3>À la française</h3>
-                            <h4>Cité Rouge</h4>
+                <article class="main-card">
+                    <a><img class="main-card__img" src="images/restaurants/cité-rouge.jpg" alt="photographie d'un plat"/></a>
+                    <div class="main-card__box">
+                        <div class="main-card__text-box">
+                            <h3 class="main-card__title">À la française</h3>
+                            <h4 class="main-card__title-2">Cité Rouge</h4>
                         </div>
-                        <i class="fa-solid fa-heart"></i>
+                        <i class="main-card__box__like fa-regular fa-heart fa-lg"></i>
                     </div>
+
                 </article>
 
-                <article>
-                    <img src="images/restaurants/folie-méricourt.jpg" alt="photographie d'un plat sur assiète allongée"><span>Nouveau</span></img>
-                    <div>
-                        <div>
-                            <h3>Le délice des sens</h3>
-                            <h4>Folie-Méricourt</h4>
+                <article class="main-card">
+                    </a><img class="main-card__img" src="images/restaurants/folie-méricourt.jpg" alt="photographie d'un plat sur assiète allongée"><a>
+                    <div class="main-card__box">
+                        <div class="main-card__text-box">
+                            <h3 class="main-card__title">Le délice des sens</h3>
+                            <h4 class="main-card__title-2">Folie-Méricourt</h4>
                         </div>
-                        <i class="fa-solid fa-heart"></i>
+                        <i class="main-card__box__like fa-regular fa-heart fa-lg"></i>
                     </div>
+
                 </article>
                 
             </div>
         </section>
 
         <footer class="footer">
-            <h2>ohmyfood</h2>
-            <ul>
-                <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
-                <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
-                <li>Mentions légales</li>
-                <li>Contact</li>
+            <h2 class="footer__title">ohmyfood</h2>
+            <ul class="footer__ul">
+                <li class="footer__li"><i class="footer__icon fa-solid fa-utensils fa-sm"></i><a>Proposer un restaurant</a></li>
+                <li class="footer__li"><i class="footer__icon fa-solid fa-handshake-angle fa-xs"></i><a>Devenir partenaire</a></li>
+                <li class="footer__li"><a>Mentions légales</a></li>
+                <li class="footer__li"><a>Contact</a></li>
             </ul>
         </footer>
     </body>
