@@ -1,11 +1,13 @@
 @import "7to1/1utils/variables";
 @import "7to1/1utils/mixins";
 @import "7to1/3base/global";
+@import "7to1/6pages/pages";
 
 .header{
     display: flex;
     justify-content: center;
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
+    position: relative;
     &__logo{
         width: 160px;
     }
@@ -51,14 +53,7 @@
         }
 
         &__btn{
-            @include purple-pink;
-            border: 0;
-            @include main-shadow;
-            border-radius: 20px;
             width: 190px;
-            margin: auto;
-            font-size: 14px;
-            font-weight: 500;
             padding: 14px;
             margin-top: 20px;
             & a{

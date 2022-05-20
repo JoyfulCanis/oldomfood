@@ -1,0 +1,36 @@
+.header{
+    &__nav{
+        position: absolute;
+        top:22px;
+        left:18px;
+        &__arrow{
+            color: rgb(57, 57, 57);
+        }
+    }
+}
+
+.main{
+    &__img{
+        width: 100%;
+        
+    }
+}
+
+.main-menu{
+    width: 100%;
+    background-color:$color-grey-2;
+    border-radius: 30px;
+    &__box{
+        @include flex-row;
+        justify-content: space-between;
+        padding:30px 40px 30px 18px;
+        &__title{
+            font-family: Shrikhand;
+            font-size: 25px;
+            font-weight: 300;
+        }
+        &__like{
+            line-height: 34px;
+        }
+    }
+}
