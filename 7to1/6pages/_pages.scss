@@ -26,11 +26,89 @@
         padding:30px 40px 30px 18px;
         &__title{
             font-family: Shrikhand;
-            font-size: 25px;
+            font-size: 28px;
             font-weight: 300;
         }
         &__like{
             line-height: 34px;
         }
     }
+}
+
+.menu{
+    padding:0px 16px 26px 16px;
+    &__title{
+        width: 40px;
+        border-bottom: 3px solid $color-tertiary;
+        color:rgba(0, 0, 0, 0.753);
+        font-weight: 400;
+        font-size: 16px;
+        padding-bottom: 4px;
+    }
+    &__big-box{
+        @include flex-row;
+    }
+    &__box{
+        @include flex-row;
+        justify-content: space-between;
+        background-color:  white;
+        border-radius: 16px;
+        margin-top: 16px;
+        @include sub-shadow;
+        &__text-box{
+            @include flex-column;
+            padding-top: 10px;
+            padding-bottom: 12px;
+            padding-left: 12px;
+            
+
+            &__title{
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            &__text{
+                padding-top: 2px;
+                color: rgba(0, 0, 0, 0.836);
+                font-weight: 400;
+                font-size: 14px;
+            }
+        
+        }
+        &__price-and-check{
+            @include flex-row;
+            flex-wrap: nowrap;
+        }
+        &__price{
+            font-weight: bold;
+            font-size: 14px;
+            color:rgb(62, 62, 62);
+            display: inline-block;
+            
+        }
+        &__check{
+            position: relative;
+            height: 100%;
+            width: 54px;
+            display:inline-block;
+            color:white;
+            border-radius: 0px 14px 14px 0px;
+            background-color: $color-tertiary;
+            &__icon{
+                position: absolute;
+                left:17px;
+                top:30px;
+            }
+        }
+    }
+    
+}
+
+.order-btn{
+    color:white;
+    font-size: 16px;
+    font-weight: 400;
+    width: 180px;
+    padding:14px 0 14px 0;
+    
 }

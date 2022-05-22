@@ -23,9 +23,9 @@ a {
   border: 0;
   box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.175);
   margin: auto;
-  border-radius: 20px;
+  border-radius: 22px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: bold;
 }
 
 .header__nav {
@@ -54,11 +54,86 @@ a {
 }
 .main-menu__box__title {
   font-family: Shrikhand;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 300;
 }
 .main-menu__box__like {
   line-height: 34px;
+}
+
+.menu {
+  padding: 0px 16px 26px 16px;
+}
+.menu__title {
+  width: 40px;
+  border-bottom: 3px solid #99E2D0;
+  color: rgba(0, 0, 0, 0.753);
+  font-weight: 400;
+  font-size: 16px;
+  padding-bottom: 4px;
+}
+.menu__big-box {
+  display: flex;
+  flex-direction: row;
+}
+.menu__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 16px;
+  margin-top: 16px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.07);
+}
+.menu__box__text-box {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  padding-left: 12px;
+}
+.menu__box__text-box__title {
+  font-weight: 500;
+  font-size: 18px;
+}
+.menu__box__text-box__text {
+  padding-top: 2px;
+  color: rgba(0, 0, 0, 0.836);
+  font-weight: 400;
+  font-size: 14px;
+}
+.menu__box__price-and-check {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.menu__box__price {
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(62, 62, 62);
+  display: inline-block;
+}
+.menu__box__check {
+  position: relative;
+  height: 100%;
+  width: 54px;
+  display: inline-block;
+  color: white;
+  border-radius: 0px 14px 14px 0px;
+  background-color: #99E2D0;
+}
+.menu__box__check__icon {
+  position: absolute;
+  left: 17px;
+  top: 30px;
+}
+
+.order-btn {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  width: 180px;
+  padding: 14px 0 14px 0;
 }
 
 .header {
