@@ -1,6 +1,9 @@
 @mixin purple-pink {
     background: linear-gradient(#9356DC, #FF79DA);
 }
+@mixin purple-back{
+    background: linear-gradient( #9256dc25 100%, white)
+}
 
 @mixin flex-column {
     display: flex;

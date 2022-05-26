@@ -25,6 +25,7 @@
             line-height: 44px;
             font-weight: 500;
             font-size: 15px;
+            color:$color-adress;
         }
         &__icon{
             margin-right: 20px;  
@@ -64,7 +65,8 @@
 
 // The "location" icon, for priority purpose //
 }#research-icon{
-    line-height: 42px; 
+    line-height: 42px;
+    color:$color-adress;
 }
 
 .working{
@@ -93,6 +95,12 @@
             position: relative;
             text-align: center;
             @include main-shadow;
+            &:hover{
+                @include purple-back;
+                & i{
+                    color: $color-primary;
+                }
+            }
             & span{
                 position: absolute;
                 left: -6px;
@@ -106,6 +114,7 @@
                 text-align: center;  
             }
             & i{
+                color:grey;
                 position: absolute;
                 left: 30px;
             }
@@ -157,7 +166,12 @@
             position: absolute;
             right: 28px;
             top: 28px;
-
+            transition:font-weight 800ms, color 600ms;
+            transition-timing-function:cubic-bezier(.16,1.03,.66,.24);
+            &:hover{
+                font-weight: 900;
+                color:$color-primary;
+            }
         }
     }
     &__text-box{
