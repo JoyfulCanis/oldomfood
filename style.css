@@ -38,6 +38,9 @@ a {
   color: rgb(57, 57, 57);
 }
 
+.main {
+  overflow: hidden;
+}
 .main__img {
   height: 260px;
   width: 100%;
@@ -83,18 +86,34 @@ a {
   font-size: 16px;
   padding-bottom: 4px;
 }
-.menu__big-box {
-  display: flex;
-  flex-direction: row;
-}
 .menu__box {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   background-color: white;
   border-radius: 16px;
   margin-top: 16px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.07);
+  position: relative;
+  overflow: hidden;
+}
+.menu__box__text-and-price {
+  display: flex;
+  flex-direction: row;
+  padding-top: 2px;
+  position: relative;
+}
+.menu__box__text-and-price:hover + .menu__box__check {
+  transform: translateX(0px);
+}
+.menu__box__text-and-price + .menu__box__check__icon {
+  transform: rotate(360deg);
+}
+.menu__box__price {
+  color: rgb(57, 57, 57);
+  font-size: 15px;
+  position: absolute;
+  right: -70px;
+  padding-right: 20px;
 }
 .menu__box__text-box {
   display: flex;
@@ -104,45 +123,32 @@ a {
   padding-left: 12px;
 }
 .menu__box__text-box__title {
-  font-weight: bold;
+  font-weight: 550;
   font-size: 18px;
 }
 .menu__box__text-box__text {
   padding-top: 2px;
   color: rgba(0, 0, 0, 0.836);
   font-weight: 400;
-  font-size: 14px;
-}
-.menu__box__price-and-check {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-}
-.menu__box__price {
-  height: 100%;
-  display: inline-block;
-  font-weight: bold;
-  font-size: 14px;
-  position: relative;
-}
-.menu__box__price strong {
-  position: absolute;
-  right: 20px;
-  bottom: 10px;
+  font-size: 15px;
 }
 .menu__box__check {
-  display: inline-block;
-  position: relative;
-  height: 100%;
-  width: 0;
-  color: white;
-  border-radius: 0px 14px 14px 0px;
+  display: flex;
   background-color: #99E2D0;
+  height: 100%;
+  width: 54px;
+  position: absolute;
+  right: 0;
+  border-radius: 0 16px 16px 0px;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(54px);
+  transition: transform 600ms;
 }
 .menu__box__check__icon {
-  position: absolute;
-  left: 17px;
-  top: 30px;
+  display: block;
+  color: white;
+  transition: transform 1000ms;
 }
 
 .order-btn {
