@@ -13,34 +13,36 @@
         <title>Ohmyfood!</title>
     </head>
     <body>
-        <header class="header">
+        <header class="header index-load">
                 <img class="header__logo" src="images/logo/ohmyfood.png" alt="logo ohmyfood">
         </header>
-        <main>
-            <section class="research">
-                <div class="research__location">
-                    <i class="fa-solid fa-location-dot research__location__icon" id="research-icon"></i>
-                    <adress class="research__location__text">Paris, Belleville</adress>
-                </div>
-                <div class="research__explorer">
-                    <h1 class="research__explorer__title">Réservez le menu qui vous convient</h1>
-                    <p class="research__explorer__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                    <button class="research__explorer__btn all-btn"><a href="#">Explorer nos restaurants</a></button>
-                </div>
-            </section>
+        <main class="main index-load">
+            <div class="youhou-houhou">
+                <section class="research">
+                    <div class="research__location">
+                        <i class="fa-solid fa-location-dot research__location__icon" id="research-icon"></i>
+                        <adress class="research__location__text">Paris, Belleville</adress>
+                    </div>
+                    <div class="research__explorer">
+                        <h1 class="research__explorer__title">Réservez le menu qui vous convient</h1>
+                        <p class="research__explorer__text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                        <button class="research__explorer__btn all-btn"><a href="#">Explorer nos restaurants</a></button>
+                    </div>
+                </section>
 
-            <section class="working">
-                <h2 class="working__title">Fonctionnement</h2>
-                <ol class="working__box">
-                    <li class="working__box__li"><span>1</span><i class="fa-solid fa-mobile-screen-button"></i>
-                    Choisissez un restaurant</li>
-                    <li class="working__box__li"><span>2</span><i class="fa-solid fa-list"></i>
-                    Composez votre menu</li>
-                    <li class="working__box__li"><span>3</span><i class="fa-solid fa-store"></i>
-                    Dégustez au restaurant</li>
-                </ol>
-            </section>
-            
+                <section class="working">
+                    <h2 class="working__title">Fonctionnement</h2>
+                    <ol class="working__box">
+                        <li class="working__box__li"><span>1</span><i class="fa-solid fa-mobile-screen-button"></i>
+                        Choisissez un restaurant</li>
+                        <li class="working__box__li"><span>2</span><i class="fa-solid fa-list"></i>
+                        Composez votre menu</li>
+                        <li class="working__box__li"><span>3</span><i class="fa-solid fa-store"></i>
+                        Dégustez au restaurant</li>
+                    </ol>
+                </section>
+            </div>
+
             <section class="main-box">
                 <h2 class="main-box__title">Restaurants</h2>
                 <div class="main-box__sub-box">
@@ -101,7 +103,7 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">
+        <footer class="footer index-load">
             <h2 class="footer__title">ohmyfood</h2>
             <ul class="footer__ul">
                 <li class="footer__li"><i class="footer__icon fa-solid fa-utensils fa-sm"></i><a>Proposer un restaurant</a></li>
@@ -110,5 +112,6 @@
                 <li class="footer__li"><a>Contact</a></li>
             </ul>
         </footer>
+        <div class="loader"></div>
     </body>
 </html>

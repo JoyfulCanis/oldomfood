@@ -6,6 +6,7 @@
 
 body{
    width: 100%;
+   
 }
 
 ul, ol{
@@ -28,4 +29,32 @@ a{
    font-size: 14px;
    font-weight:500;
    
+}
+
+.index-load{
+   opacity: 1;
+   animation: index-load 2.8s linear;
+   }
+   
+  // animation: page-load 1s linear 3s 1;
+@keyframes index-load {
+   0%{opacity: 0;}
+   99.99%{opacity: 0;}
+   100%{opacity: 1;}
+}
+
+@keyframes like {
+   from {opacity: 0;}
+   to {opacity: 1;}
+}
+
+@keyframes spin {
+   0% { transform: rotate(0deg); opacity: 1; width: 120px;}
+   50%{transform: rotate(360deg);}
+   100% {transform: rotate(720deg); opacity: 0; width: 120px;}
+}
+ @keyframes fade-in
+{ 
+  from {top:-20px; opacity: 0;}
+  to {top:0px; opacity: 1;}
 }

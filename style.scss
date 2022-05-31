@@ -8,10 +8,20 @@
     justify-content: center;
     padding: 20px 10px 10px 10px;
     position: relative;
+    @include desktop-only{
+        justify-content: flex-start;
+        box-shadow: 0 0 0;
+    }
     &__logo{
         width: 160px;
     }
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.118);
+}
+
+.main{
+    @include desktop-only{
+        padding:100px;
+    }
 }
 
 .research{
@@ -132,9 +142,24 @@
         margin-left: 20px;
         padding-top: 50px;
     }
+    @include desktop-only{
+        border-radius: 16px;
+    }
     &__sub-box{
         @include flex-column;
         padding: 30px 0px 30px 0px;
+
+        @include tab-only{
+            @include flex-row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            
+        }
+        @include desktop-only{
+            @include flex-row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
     }
 }
 
@@ -148,6 +173,17 @@
     background-color: white;
     border-radius: 16px;
     position: relative;
+    @include tab-only{
+        width: 40%;
+        margin: auto;
+        margin-top:20px;
+    }
+    @include desktop-only{
+        width: 40%;
+        margin: auto;
+        margin-top: 20px;
+    }
+
     & a{
         width: 100%;
     }
@@ -166,14 +202,17 @@
             position: absolute;
             right: 28px;
             top: 28px;
-            transition:font-weight 800ms, color 600ms;
-            transition-timing-function:cubic-bezier(.16,1.03,.66,.24);
             &:hover{
+                display: initial;
                 font-weight: 900;
-                color:$color-primary;
-            }
-        }
+                background: -webkit-linear-gradient(225deg, $color-secondary, $color-primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                
+            }               
+        }   
     }
+
     &__text-box{
         position: absolute;
         top: 10px;
@@ -233,3 +272,20 @@
         color: white;
     }
 }
+
+//------------------- LOADER ----------------//
+.loader {
+    position: fixed;
+    top:50%;
+    left: 50%;
+    margin-left: -50px;
+    border: 16px solid linear-gradient(#9356DC, #FF79DA); 
+    border-top: 16px solid $color-primary;
+    border-bottom: 16px solid $color-secondary;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 3s linear 1;
+    opacity: 0;
+    width:0;
+  }

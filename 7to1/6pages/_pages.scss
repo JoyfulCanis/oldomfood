@@ -11,6 +11,7 @@
 
 .main{
     overflow: hidden;
+    
     &__img{
         height:260px;
         width: 100%;
@@ -40,9 +41,17 @@
             font-weight: 300;
         }
         &__like{
-            line-height: 34px;
+            transition: font-weight 100ms;
+            &:hover{
+                @include heart-like;
+            }
+            
         }
     }
+}
+
+.main-menu__box i{
+    line-height: 40px;
 }
 
 .menu{
@@ -64,17 +73,24 @@
         @include sub-shadow;
         position: relative;
         overflow: hidden;
-
+        animation: fade-in 1.4s ease-in-out;
 
         &__text-and-price{
             @include flex-row;
             padding-top: 2px;
             position:relative;
+            width:80%;
+            transition: width 600ms;
             &:hover + .menu__box__check{
                 transform: translateX(0px);
             }
-            & + .menu__box__check__icon{
-                transform: rotate(360deg);
+            &:hover ~ .menu__box__check-icon{
+                animation: rotate-check 1s ease-in-out infinite;
+                animation-iteration-count: 1;
+                margin-right: 0px;
+            }
+            &:hover{
+                width: 70%;
             }
 
         }
@@ -83,6 +99,7 @@
             font-size: 15px;
             position: absolute;
             right:-70px;
+            bottom:20px;
             padding-right: 20px;
         }
         &__text-box{
@@ -117,11 +134,17 @@
             align-items: center;
             transform: translateX(54px);
             transition: transform 600ms;
-            &__icon{
-                display: block;
-                color:white;
-                transition: transform 1000ms;
-            }
+        }
+        &__check-icon{
+            display: block;
+            color:white;
+            display: inline-block;
+            position: absolute;
+            right:100px;
+            right: 18px;
+            top:30px;
+            margin-right: -57px;
+            transition: margin-right 650ms ease-in-out;
             
         }
         
@@ -130,7 +153,11 @@
     }
     
 }
-
+@keyframes rotate-check {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+    
+}
 .order-btn{
     color:white;
     font-size: 16px;
@@ -144,3 +171,4 @@
 //check margin + overflow//
 //loader animé//
 //positionnement coeur//
+
