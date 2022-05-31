@@ -11,9 +11,14 @@
     @include desktop-only{
         justify-content: flex-start;
         box-shadow: 0 0 0;
+        border-bottom: 1px groove $color-secondary;
     }
     &__logo{
         width: 160px;
+        @include desktop-only{
+        padding-left: 100px;
+        width: 260px;
+        }
     }
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.118);
 }
@@ -23,22 +28,45 @@
         padding:100px;
     }
 }
-
+.sect-and-aside{
+    @include desktop-only{
+        @include flex-column;
+    }
+}
 .research{
+    @include desktop-only{
+        padding-bottom: 30px;
+        @include flex-row;
+        position:relative;
+        height: 120px;
+    }
+    
     &__location{
         background-color: $color-grey-1;
         display: flex;
         justify-content: center;
         height: 44px;
+        @include desktop-only{
+            border-radius: 16px 0px 0px 16px;
+            height: 45px;
+            @include main-shadow;
+        }
         
         &__text{
             line-height: 44px;
             font-weight: 500;
             font-size: 15px;
             color:$color-adress;
+            @include desktop-only{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
         }
         &__icon{
-            margin-right: 20px;  
+            margin-right: 20px;
+            @include desktop-only{
+                margin-right: 0;
+            }  
         }
     }
     &__explorer{
@@ -46,6 +74,11 @@
         @include flex-column;
         justify-content: center;
         height: 250px;
+        @include desktop-only{
+            background-color: white;
+            position: relative;
+        }
+        
 
         &__title{
             font-size: 22px;
@@ -53,6 +86,13 @@
             width: 70%;
             margin-left: 16%;
             margin-top: 30px;
+            @include desktop-only{
+                position: absolute;
+                top:-70px;
+                left:-160px;
+                width: 400px;
+
+            }
         }
 
         &__text{
@@ -60,7 +100,10 @@
             font-size: 15px;
             text-align: center;
             margin-left: 6%;
-            padding-top: 18px
+            padding-top: 18px;
+            @include desktop-only{
+                display: none;
+            }
         }
 
         &__btn{
@@ -70,29 +113,51 @@
             & a{
                 color: white;
             }
+            @include desktop-only{
+                position: absolute;
+                top:-20px;
+                border-radius: 0 16px 16px 0px;
+            }
         }
     }
 
 // The "location" icon, for priority purpose //
-}#research-icon{
+}
+#research-icon{
     line-height: 42px;
     color:$color-adress;
+    @include desktop-only{
+        padding-left: 8px;
+    }
 }
 
 .working{
     @include flex-column;
     padding:40px 0px 40px 0px;
-
+    @include desktop-only{
+        padding: 0;
+        padding-bottom: 40px;
+        
+    }
     &__title{
         font-size: 24px;
         margin-bottom: 20px;
         margin-left: 14px;
+        @include desktop-only{
+            margin-left: 0;
+        }
     }
 
     &__box{
         @include flex-column;
         width: 85%;
         margin:auto;
+        
+        @include desktop-only{
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+        }
 
         &__li{
             background-color: $color-grey-2;
@@ -104,6 +169,11 @@
             border-radius: 22px;
             position: relative;
             text-align: center;
+            @include desktop-only{
+            background-color:lighten($color-grey-2, 2%);
+            width: 260px;
+            
+            }
             @include main-shadow;
             &:hover{
                 @include purple-back;
@@ -180,6 +250,7 @@
     }
     @include desktop-only{
         width: 40%;
+        max-width: 600px;
         margin: auto;
         margin-top: 20px;
     }
@@ -247,6 +318,11 @@
     @include flex-column;
     background-color: rgb(56, 56, 56);
     padding: 20px 0px 26px 24px;
+    @include desktop-only{
+        padding-left: 100px;
+        position: relative;
+        height: 160px;
+    }
     &__title{
         color: white;
         font-family: Shrikhand;
@@ -255,6 +331,15 @@
     }
     &__ul{
         padding-top: 18px;
+        @include desktop-only{
+            @include flex-row;
+            justify-content: space-between;
+            align-self: center;
+            width: 90%;
+            position: absolute;
+            top:40px;
+            left: -4px;
+        }
     }
 
     &__li{

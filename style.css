@@ -254,10 +254,17 @@ a {
   .header {
     justify-content: flex-start;
     box-shadow: 0 0 0;
+    border-bottom: 1px groove #FF79DA;
   }
 }
 .header__logo {
   width: 160px;
+}
+@media screen and (min-width: 992px) {
+  .header__logo {
+    padding-left: 100px;
+    width: 260px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -266,11 +273,34 @@ a {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .sect-and-aside {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .research {
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 120px;
+  }
+}
 .research__location {
   background-color: #e7e7e7;
   display: flex;
   justify-content: center;
   height: 44px;
+}
+@media screen and (min-width: 992px) {
+  .research__location {
+    border-radius: 16px 0px 0px 16px;
+    height: 45px;
+    box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.175);
+  }
 }
 .research__location__text {
   line-height: 44px;
@@ -278,8 +308,19 @@ a {
   font-size: 15px;
   color: rgb(57, 57, 57);
 }
+@media screen and (min-width: 992px) {
+  .research__location__text {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .research__location__icon {
   margin-right: 20px;
+}
+@media screen and (min-width: 992px) {
+  .research__location__icon {
+    margin-right: 0;
+  }
 }
 .research__explorer {
   background-color: rgb(245, 245, 245);
@@ -288,6 +329,12 @@ a {
   justify-content: center;
   height: 250px;
 }
+@media screen and (min-width: 992px) {
+  .research__explorer {
+    background-color: white;
+    position: relative;
+  }
+}
 .research__explorer__title {
   font-size: 22px;
   text-align: center;
@@ -295,12 +342,25 @@ a {
   margin-left: 16%;
   margin-top: 30px;
 }
+@media screen and (min-width: 992px) {
+  .research__explorer__title {
+    position: absolute;
+    top: -70px;
+    left: -160px;
+    width: 400px;
+  }
+}
 .research__explorer__text {
   font-weight: 300;
   font-size: 15px;
   text-align: center;
   margin-left: 6%;
   padding-top: 18px;
+}
+@media screen and (min-width: 992px) {
+  .research__explorer__text {
+    display: none;
+  }
 }
 .research__explorer__btn {
   width: 190px;
@@ -310,10 +370,22 @@ a {
 .research__explorer__btn a {
   color: white;
 }
+@media screen and (min-width: 992px) {
+  .research__explorer__btn {
+    position: absolute;
+    top: -20px;
+    border-radius: 0 16px 16px 0px;
+  }
+}
 
 #research-icon {
   line-height: 42px;
   color: rgb(57, 57, 57);
+}
+@media screen and (min-width: 992px) {
+  #research-icon {
+    padding-left: 8px;
+  }
 }
 
 .working {
@@ -321,16 +393,34 @@ a {
   flex-direction: column;
   padding: 40px 0px 40px 0px;
 }
+@media screen and (min-width: 992px) {
+  .working {
+    padding: 0;
+    padding-bottom: 40px;
+  }
+}
 .working__title {
   font-size: 24px;
   margin-bottom: 20px;
   margin-left: 14px;
+}
+@media screen and (min-width: 992px) {
+  .working__title {
+    margin-left: 0;
+  }
 }
 .working__box {
   display: flex;
   flex-direction: column;
   width: 85%;
   margin: auto;
+}
+@media screen and (min-width: 992px) {
+  .working__box {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
 }
 .working__box__li {
   background-color: rgb(245, 245, 245);
@@ -343,6 +433,12 @@ a {
   position: relative;
   text-align: center;
   box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.175);
+}
+@media screen and (min-width: 992px) {
+  .working__box__li {
+    background-color: #fafafa;
+    width: 260px;
+  }
 }
 .working__box__li:hover {
   background: linear-gradient(rgba(146, 86, 220, 0.1450980392) 100%, white);
@@ -426,6 +522,7 @@ a {
 @media screen and (min-width: 992px) {
   .main-card {
     width: 40%;
+    max-width: 600px;
     margin: auto;
     margin-top: 20px;
   }
@@ -486,6 +583,13 @@ a {
   background-color: rgb(56, 56, 56);
   padding: 20px 0px 26px 24px;
 }
+@media screen and (min-width: 992px) {
+  .footer {
+    padding-left: 100px;
+    position: relative;
+    height: 160px;
+  }
+}
 .footer__title {
   color: white;
   font-family: Shrikhand;
@@ -494,6 +598,18 @@ a {
 }
 .footer__ul {
   padding-top: 18px;
+}
+@media screen and (min-width: 992px) {
+  .footer__ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    width: 90%;
+    position: absolute;
+    top: 40px;
+    left: -4px;
+  }
 }
 .footer__li {
   font-size: 15px;
