@@ -172,7 +172,7 @@
             @include desktop-only{
             background-color:lighten($color-grey-2, 2%);
             width: 260px;
-            
+            cursor: pointer
             }
             @include main-shadow;
             &:hover{
@@ -264,6 +264,9 @@
         object-position: 10% 60%;
         border-radius: 16px 16px 0px 0px;
         height: 170px;
+        @include desktop-only{
+            object-position: 40% 65%;
+        }
     }
 
     &__box{
