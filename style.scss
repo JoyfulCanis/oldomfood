@@ -123,12 +123,14 @@
             flex-direction: row;
             justify-content: space-around;
             width: 100%;
+        
         }
         @include tab-only{
             flex-direction: row;
             justify-content: space-around;
             flex-wrap: wrap;
         }
+
 
         &__li{
             background-color: $color-grey-2;
@@ -148,7 +150,11 @@
                 width: 260px
             }
             @include main-shadow;
+            transition: transform 240ms;
             &:hover{
+                @include desktop-only{
+                    transform: scale(1.2);
+                }
                 @include purple-back;
                 & i{
                     color: $color-primary;
@@ -156,7 +162,7 @@
             }
             & span{
                 position: absolute;
-                left: -6px;
+                left: -8px;
                 display:inline-block;
                 background-color: $color-primary;
                 color: white;
@@ -164,7 +170,9 @@
                 border-radius: 12px;
                 width: 18px;
                 height: 18px;
-                text-align: center;  
+                text-align: center;
+                font-size: 12px;
+                line-height: 18px;
             }
             & i{
                 color:grey;
@@ -208,6 +216,7 @@
 
 #heart-like{
     line-height: 40px;
+    cursor: pointer;
 }
 
 .main-card{
