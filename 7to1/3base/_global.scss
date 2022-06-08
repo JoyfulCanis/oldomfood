@@ -28,15 +28,16 @@ a{
    border-radius: 22px;
    font-size: 14px;
    font-weight:500;
+   color: white;
+   cursor: pointer;
    
 }
 
 .index-load{
    opacity: 1;
-   animation: index-load 2.8s linear;
+   animation: index-load 1.8s linear;
    }
    
-  // animation: page-load 1s linear 3s 1;
 @keyframes index-load {
    0%{opacity: 0;}
    99.99%{opacity: 0;}
@@ -51,10 +52,38 @@ a{
 @keyframes spin {
    0% { transform: rotate(0deg); opacity: 1; width: 120px;}
    50%{transform: rotate(360deg); opacity: 1;}
+   60%{transform: rotate(380deg);}
    100% {transform: rotate(720deg); opacity: 0; width: 120px;}
 }
- @keyframes fade-in
-{ 
-  from {top:-20px; opacity: 0;}
-  to {top:0px; opacity: 1;}
+
+
+@for $i from 1 through 10{
+   .fade-in__#{$i}{
+      animation: fade-in 1s forwards $i * 0.15s;
+   }
+}
+
+@keyframes fade-in {
+
+   0%{
+      top:-20px;
+      opacity: 0;
+   }
+   
+   100%{
+      top:0px;
+      opacity: 1;
+   }
+}
+
+@keyframes rotate-check {
+   0%{transform: rotate(0deg);}
+   100%{transform: rotate(360deg);}
+}
+
+@keyframes card-rotate {
+   0%{transform: rotate(0deg);}
+   25%{transform: rotate(-5deg);}
+   75%{transform: rotate(5deg);}
+   100%{transform: rotate(0);}
 }

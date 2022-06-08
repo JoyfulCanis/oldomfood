@@ -8,17 +8,9 @@
     justify-content: center;
     padding: 20px 10px 10px 10px;
     position: relative;
-    @include desktop-only{
-        justify-content: flex-start;
-        box-shadow: 0 0 0;
-        border-bottom: 1px groove $color-secondary;
-    }
+
     &__logo{
         width: 160px;
-        @include desktop-only{
-        padding-left: 100px;
-        width: 260px;
-        }
     }
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.118);
 }
@@ -35,10 +27,7 @@
 }
 .research{
     @include desktop-only{
-        padding-bottom: 30px;
-        @include flex-row;
-        position:relative;
-        height: 120px;
+        padding-bottom: 40px;
     }
     
     &__location{
@@ -47,9 +36,7 @@
         justify-content: center;
         height: 44px;
         @include desktop-only{
-            border-radius: 16px 0px 0px 16px;
-            height: 45px;
-            @include main-shadow;
+            border-radius: 16px 16px 0px 0px;
         }
         
         &__text{
@@ -57,16 +44,11 @@
             font-weight: 500;
             font-size: 15px;
             color:$color-adress;
-            @include desktop-only{
-                padding-left: 10px;
-                padding-right: 10px;
-            }
         }
+
         &__icon{
             margin-right: 20px;
-            @include desktop-only{
-                margin-right: 0;
-            }  
+            
         }
     }
     &__explorer{
@@ -74,36 +56,23 @@
         @include flex-column;
         justify-content: center;
         height: 250px;
-        @include desktop-only{
-            background-color: white;
-            position: relative;
-        }
         
 
         &__title{
             font-size: 22px;
             text-align: center;
             width: 70%;
-            margin-left: 16%;
-            margin-top: 30px;
-            @include desktop-only{
-                position: absolute;
-                top:-70px;
-                left:-160px;
-                width: 400px;
-
-            }
+            margin: auto;
+            margin-bottom: 14px;
+            
         }
 
         &__text{
             font-weight: 300;
             font-size: 15px;
             text-align: center;
-            margin-left: 6%;
-            padding-top: 18px;
-            @include desktop-only{
-                display: none;
-            }
+            padding-bottom: 10px;
+            
         }
 
         &__btn{
@@ -113,10 +82,10 @@
             & a{
                 color: white;
             }
-            @include desktop-only{
-                position: absolute;
-                top:-20px;
-                border-radius: 0 16px 16px 0px;
+            transition: transform 0.2s ease-in-out;
+            &:hover{
+                transform:scale(1.2) ;
+
             }
         }
     }
@@ -126,9 +95,6 @@
 #research-icon{
     line-height: 42px;
     color:$color-adress;
-    @include desktop-only{
-        padding-left: 8px;
-    }
 }
 
 .working{
@@ -137,8 +103,8 @@
     @include desktop-only{
         padding: 0;
         padding-bottom: 40px;
-        
     }
+
     &__title{
         font-size: 24px;
         margin-bottom: 20px;
@@ -158,6 +124,11 @@
             justify-content: space-around;
             width: 100%;
         }
+        @include tab-only{
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
 
         &__li{
             background-color: $color-grey-2;
@@ -169,10 +140,12 @@
             border-radius: 22px;
             position: relative;
             text-align: center;
+            cursor: pointer;
             @include desktop-only{
-            background-color:lighten($color-grey-2, 2%);
             width: 260px;
-            cursor: pointer
+            }
+            @include tab-only{
+                width: 260px
             }
             @include main-shadow;
             &:hover{
@@ -213,7 +186,7 @@
         padding-top: 50px;
     }
     @include desktop-only{
-        border-radius: 16px;
+        border-radius:0px 0px 16px 16px;
     }
     &__sub-box{
         @include flex-column;
@@ -233,6 +206,10 @@
     }
 }
 
+#heart-like{
+    line-height: 40px;
+}
+
 .main-card{
     @include flex-column;
     @include main-shadow;
@@ -243,6 +220,13 @@
     background-color: white;
     border-radius: 16px;
     position: relative;
+    // ANIMATION A ENLEVER //
+    transition: transform 0.2s ease-in-out;
+        &:hover{
+            transform:scale(1.05);
+            animation: card-rotate 200ms ease-in-out;
+        }
+
     @include tab-only{
         width: 40%;
         margin: auto;
@@ -254,6 +238,7 @@
         margin: auto;
         margin-top: 20px;
     }
+    
 
     & a{
         width: 100%;
@@ -270,27 +255,22 @@
     }
 
     &__box{
-        position: relative;
+        @include flex-row;
+        justify-content: space-between;
+        width:100%;
+        padding: 10px 20px 10px 10px;
 
         &__like{
-            position: absolute;
-            right: 28px;
-            top: 28px;
+            
             &:hover{
-                display: initial;
-                font-weight: 900;
-                background: -webkit-linear-gradient(225deg, $color-secondary, $color-primary);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                
+                @include heart-like;
+
             }               
         }   
     }
 
     &__text-box{
-        position: absolute;
-        top: 10px;
-        left: 12px;
+        
     }
 
     &__title{
@@ -323,8 +303,6 @@
     padding: 20px 0px 26px 24px;
     @include desktop-only{
         padding-left: 100px;
-        position: relative;
-        height: 160px;
     }
     &__title{
         color: white;
@@ -334,15 +312,6 @@
     }
     &__ul{
         padding-top: 18px;
-        @include desktop-only{
-            @include flex-row;
-            justify-content: space-between;
-            align-self: center;
-            width: 90%;
-            position: absolute;
-            top:40px;
-            left: -4px;
-        }
     }
 
     &__li{
@@ -350,6 +319,12 @@
         padding-bottom: 6px;
         & a{
         color: white;
+        &:hover{
+            color: $color-primary;
+        }
+        &:hover > i{
+            color: $color-primary;
+        }
         }
     }
 
@@ -367,13 +342,20 @@
     top:50%;
     left: 50%;
     margin-left: -50px;
-    border: 16px solid linear-gradient(#9356DC, #FF79DA); 
+    border-left:0px;
+    border-right:0px;
     border-top: 16px solid $color-primary;
     border-bottom: 16px solid $color-secondary;
     border-radius: 50%;
     width: 120px;
     height: 120px;
-    animation: spin 3s linear 1;
+    animation: spin 2s ease-in-out 1;
     opacity: 0;
     width:0;
   }
+
+
+
+  //text overflow//
+  //moz//
+  //heart => Transition font et background   ====> mettre background de base en noir// 

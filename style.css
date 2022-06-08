@@ -27,11 +27,13 @@ a {
   border-radius: 22px;
   font-size: 14px;
   font-weight: 500;
+  color: white;
+  cursor: pointer;
 }
 
 .index-load {
   opacity: 1;
-  animation: index-load 2.8s linear;
+  animation: index-load 1.8s linear;
 }
 
 @keyframes index-load {
@@ -63,20 +65,85 @@ a {
     transform: rotate(360deg);
     opacity: 1;
   }
+  60% {
+    transform: rotate(380deg);
+  }
   100% {
     transform: rotate(720deg);
     opacity: 0;
     width: 120px;
   }
 }
+.fade-in__1 {
+  animation: fade-in 1s forwards 0.15s;
+}
+
+.fade-in__2 {
+  animation: fade-in 1s forwards 0.3s;
+}
+
+.fade-in__3 {
+  animation: fade-in 1s forwards 0.45s;
+}
+
+.fade-in__4 {
+  animation: fade-in 1s forwards 0.6s;
+}
+
+.fade-in__5 {
+  animation: fade-in 1s forwards 0.75s;
+}
+
+.fade-in__6 {
+  animation: fade-in 1s forwards 0.9s;
+}
+
+.fade-in__7 {
+  animation: fade-in 1s forwards 1.05s;
+}
+
+.fade-in__8 {
+  animation: fade-in 1s forwards 1.2s;
+}
+
+.fade-in__9 {
+  animation: fade-in 1s forwards 1.35s;
+}
+
+.fade-in__10 {
+  animation: fade-in 1s forwards 1.5s;
+}
+
 @keyframes fade-in {
-  from {
+  0% {
     top: -20px;
     opacity: 0;
   }
-  to {
+  100% {
     top: 0px;
     opacity: 1;
+  }
+}
+@keyframes rotate-check {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes card-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }
 .header__nav {
@@ -86,6 +153,9 @@ a {
 }
 .header__nav__arrow {
   color: rgb(57, 57, 57);
+}
+.header__nav__arrow:hover {
+  color: #9356DC;
 }
 
 .main {
@@ -105,6 +175,15 @@ a {
   }
 }
 
+@media screen and (min-width: 992px) {
+  .menu-flex {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(245, 245, 245);
+    justify-content: space-around;
+  }
+}
+
 .main-menu {
   width: 100%;
   background-color: rgb(245, 245, 245);
@@ -119,7 +198,7 @@ a {
 @media screen and (min-width: 992px) {
   .main-menu {
     margin-top: -4px;
-    border-radius: 0;
+    border-radius: 0px;
   }
 }
 .main-menu__box {
@@ -151,6 +230,13 @@ a {
 
 .menu {
   padding: 0px 16px 26px 16px;
+  background-color: rgb(245, 245, 245);
+  border-radius: 0;
+}
+@media screen and (min-width: 992px) {
+  .menu {
+    width: 33%;
+  }
 }
 .menu__title {
   width: 40px;
@@ -169,7 +255,13 @@ a {
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.07);
   position: relative;
   overflow: hidden;
-  animation: fade-in 1.4s ease-in-out;
+  opacity: 0;
+}
+@media screen and (min-width: 992px) {
+  .menu__box {
+    width: 100%;
+    height: 68px;
+  }
 }
 .menu__box__text-and-price {
   display: flex;
@@ -178,6 +270,11 @@ a {
   position: relative;
   width: 80%;
   transition: width 600ms;
+}
+@media screen and (min-width: 992px) {
+  .menu__box__text-and-price {
+    position: inherit;
+  }
 }
 .menu__box__text-and-price:hover + .menu__box__check {
   transform: translateX(0px);
@@ -198,6 +295,11 @@ a {
   bottom: 20px;
   padding-right: 20px;
 }
+@media screen and (min-width: 992px) {
+  .menu__box__price {
+    position: inherit;
+  }
+}
 .menu__box__text-box {
   display: flex;
   flex-direction: column;
@@ -214,6 +316,9 @@ a {
   color: rgba(0, 0, 0, 0.836);
   font-weight: 400;
   font-size: 15px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu__box__check {
   display: flex;
@@ -239,21 +344,22 @@ a {
   margin-right: -57px;
   transition: margin-right 650ms ease-in-out;
 }
-
-@keyframes rotate-check {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+@media screen and (min-width: 992px) {
+  .menu__box__check-icon {
+    line-height: 10px;
   }
 }
+
 .order-btn {
-  color: white;
   font-size: 16px;
-  font-weight: 500;
   width: 180px;
   padding: 14px 0 14px 0;
+}
+
+.box-btn {
+  display: flex;
+  flex-direction: row;
+  padding-top: 40px;
 }
 
 .header {
@@ -263,21 +369,8 @@ a {
   position: relative;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.118);
 }
-@media screen and (min-width: 992px) {
-  .header {
-    justify-content: flex-start;
-    box-shadow: 0 0 0;
-    border-bottom: 1px groove #FF79DA;
-  }
-}
 .header__logo {
   width: 160px;
-}
-@media screen and (min-width: 992px) {
-  .header__logo {
-    padding-left: 100px;
-    width: 260px;
-  }
 }
 
 @media screen and (min-width: 992px) {
@@ -295,11 +388,7 @@ a {
 
 @media screen and (min-width: 992px) {
   .research {
-    padding-bottom: 30px;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    height: 120px;
+    padding-bottom: 40px;
   }
 }
 .research__location {
@@ -310,9 +399,7 @@ a {
 }
 @media screen and (min-width: 992px) {
   .research__location {
-    border-radius: 16px 0px 0px 16px;
-    height: 45px;
-    box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.175);
+    border-radius: 16px 16px 0px 0px;
   }
 }
 .research__location__text {
@@ -321,19 +408,8 @@ a {
   font-size: 15px;
   color: rgb(57, 57, 57);
 }
-@media screen and (min-width: 992px) {
-  .research__location__text {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
 .research__location__icon {
   margin-right: 20px;
-}
-@media screen and (min-width: 992px) {
-  .research__location__icon {
-    margin-right: 0;
-  }
 }
 .research__explorer {
   background-color: rgb(245, 245, 245);
@@ -342,63 +418,35 @@ a {
   justify-content: center;
   height: 250px;
 }
-@media screen and (min-width: 992px) {
-  .research__explorer {
-    background-color: white;
-    position: relative;
-  }
-}
 .research__explorer__title {
   font-size: 22px;
   text-align: center;
   width: 70%;
-  margin-left: 16%;
-  margin-top: 30px;
-}
-@media screen and (min-width: 992px) {
-  .research__explorer__title {
-    position: absolute;
-    top: -70px;
-    left: -160px;
-    width: 400px;
-  }
+  margin: auto;
+  margin-bottom: 14px;
 }
 .research__explorer__text {
   font-weight: 300;
   font-size: 15px;
   text-align: center;
-  margin-left: 6%;
-  padding-top: 18px;
-}
-@media screen and (min-width: 992px) {
-  .research__explorer__text {
-    display: none;
-  }
+  padding-bottom: 10px;
 }
 .research__explorer__btn {
   width: 190px;
   padding: 14px;
   margin-top: 20px;
+  transition: transform 0.2s ease-in-out;
 }
 .research__explorer__btn a {
   color: white;
 }
-@media screen and (min-width: 992px) {
-  .research__explorer__btn {
-    position: absolute;
-    top: -20px;
-    border-radius: 0 16px 16px 0px;
-  }
+.research__explorer__btn:hover {
+  transform: scale(1.2);
 }
 
 #research-icon {
   line-height: 42px;
   color: rgb(57, 57, 57);
-}
-@media screen and (min-width: 992px) {
-  #research-icon {
-    padding-left: 8px;
-  }
 }
 
 .working {
@@ -435,6 +483,13 @@ a {
     width: 100%;
   }
 }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .working__box {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
 .working__box__li {
   background-color: rgb(245, 245, 245);
   padding: 22px;
@@ -445,13 +500,17 @@ a {
   border-radius: 22px;
   position: relative;
   text-align: center;
+  cursor: pointer;
   box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.175);
 }
 @media screen and (min-width: 992px) {
   .working__box__li {
-    background-color: #fafafa;
     width: 260px;
-    cursor: pointer;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .working__box__li {
+    width: 260px;
   }
 }
 .working__box__li:hover {
@@ -489,7 +548,7 @@ a {
 }
 @media screen and (min-width: 992px) {
   .main-box {
-    border-radius: 16px;
+    border-radius: 0px 0px 16px 16px;
   }
 }
 .main-box__sub-box {
@@ -514,6 +573,10 @@ a {
   }
 }
 
+#heart-like {
+  line-height: 40px;
+}
+
 .main-card {
   display: flex;
   flex-direction: column;
@@ -525,6 +588,11 @@ a {
   background-color: white;
   border-radius: 16px;
   position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+.main-card:hover {
+  transform: scale(1.05);
+  animation: card-rotate 200ms ease-in-out;
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .main-card {
@@ -557,12 +625,11 @@ a {
   }
 }
 .main-card__box {
-  position: relative;
-}
-.main-card__box__like {
-  position: absolute;
-  right: 28px;
-  top: 28px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px 10px 10px;
 }
 .main-card__box__like:hover {
   display: initial;
@@ -570,11 +637,7 @@ a {
   background: -webkit-linear-gradient(225deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-.main-card__text-box {
-  position: absolute;
-  top: 10px;
-  left: 12px;
+  animation: like 1s ease-in-out;
 }
 .main-card__title {
   font-size: 17px;
@@ -605,8 +668,6 @@ a {
 @media screen and (min-width: 992px) {
   .footer {
     padding-left: 100px;
-    position: relative;
-    height: 160px;
   }
 }
 .footer__title {
@@ -618,24 +679,18 @@ a {
 .footer__ul {
   padding-top: 18px;
 }
-@media screen and (min-width: 992px) {
-  .footer__ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-self: center;
-    width: 90%;
-    position: absolute;
-    top: 40px;
-    left: -4px;
-  }
-}
 .footer__li {
   font-size: 15px;
   padding-bottom: 6px;
 }
 .footer__li a {
   color: white;
+}
+.footer__li a:hover {
+  color: #9356DC;
+}
+.footer__li a:hover > i {
+  color: #9356DC;
 }
 .footer__icon {
   display: inline-block;
@@ -649,13 +704,14 @@ a {
   top: 50%;
   left: 50%;
   margin-left: -50px;
-  border: 16px solid linear-gradient(#9356DC, #FF79DA);
+  border-left: 0px;
+  border-right: 0px;
   border-top: 16px solid #9356DC;
   border-bottom: 16px solid #FF79DA;
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  animation: spin 3s linear 1;
+  animation: spin 2s ease-in-out 1;
   opacity: 0;
   width: 0;
 }
