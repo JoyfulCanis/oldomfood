@@ -29,6 +29,10 @@ a {
   font-weight: 500;
   color: white;
   cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.all-btn:hover {
+  transform: scale(1.2);
 }
 
 .index-load {
@@ -432,13 +436,9 @@ a {
   width: 190px;
   padding: 14px;
   margin-top: 20px;
-  transition: transform 0.2s ease-in-out;
 }
 .research__explorer__btn a {
   color: white;
-}
-.research__explorer__btn:hover {
-  transform: scale(1.2);
 }
 
 #research-icon {
@@ -594,11 +594,15 @@ a {
   background-color: white;
   border-radius: 16px;
   position: relative;
-  transition: transform 0.2s ease-in-out;
 }
-.main-card:hover {
-  transform: scale(1.05);
-  animation: card-rotate 200ms ease-in-out;
+@media screen and (min-width: 992px) {
+  .main-card {
+    transition: transform 0.2s ease-in-out;
+  }
+  .main-card:hover {
+    transform: scale(1.05);
+    animation: card-rotate 280ms ease-in-out;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
   .main-card {

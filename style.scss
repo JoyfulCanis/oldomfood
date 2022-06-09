@@ -82,11 +82,10 @@
             & a{
                 color: white;
             }
-            transition: transform 0.2s ease-in-out;
-            &:hover{
-                transform:scale(1.2) ;
+            
+            
 
-            }
+            
         }
     }
 
@@ -229,13 +228,15 @@
     background-color: white;
     border-radius: 16px;
     position: relative;
+
     // ANIMATION A ENLEVER //
-    transition: transform 0.2s ease-in-out;
+    @include desktop-only{
+        transition: transform 0.2s ease-in-out;
         &:hover{
             transform:scale(1.05);
-            animation: card-rotate 200ms ease-in-out;
+            animation: card-rotate 280ms ease-in-out;
         }
-
+    }
     @include tab-only{
         width: 40%;
         margin: auto;
