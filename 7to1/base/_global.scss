@@ -1,0 +1,39 @@
+*{
+   margin: 0;
+   font-family: Roboto;
+   box-sizing: border-box;
+}
+
+body{
+   width: 100%;
+   
+}
+
+ul, ol{
+   list-style: none;
+   margin-left: 0;
+   padding-left: 0;
+}
+
+a{
+   text-decoration: none;
+   color: black;
+}
+
+.all-btn{
+   @include purple-pink;
+   border: 0;
+   @include main-shadow;
+   margin: auto;
+   border-radius: 22px;
+   font-size: 14px;
+   font-weight:500;
+   color: white;
+   cursor: pointer;
+   transition: transform 0.2s ease-in-out;
+   &:hover{
+      transform:scale(1.2) ;
+   }
+   
+}
+

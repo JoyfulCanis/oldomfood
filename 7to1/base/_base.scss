@@ -1,0 +1,365 @@
+
+// fichier base + régler le padding de l'index (RESEARCH) + supprimer dossiers useless + text transform uppercase sur les h2 menu//
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 20px 10px 10px 10px;
+    position: relative;
+
+    &__logo{
+        width: 160px;
+    }
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.118);
+}
+
+.main{
+    @include desktop-only{
+        padding:100px;
+    }
+}
+.sect-and-aside{
+    @include desktop-only{
+        @include flex-column;
+    }
+}
+.research{
+    @include desktop-only{
+        padding-bottom: 40px;
+    }
+    
+    &__location{
+        background-color: $color-grey-1;
+        display: flex;
+        justify-content: center;
+        height: 44px;
+        @include desktop-only{
+            border-radius: 16px 16px 0px 0px;
+        }
+        
+        &__text{
+            line-height: 44px;
+            font-weight: 500;
+            font-size: 15px;
+            color:$color-adress;
+            font-style: normal;
+        }
+
+        &__icon{
+            margin-right: 20px;
+            
+        }
+    }
+    &__explorer{
+        background-color: $color-grey-2;
+        @include flex-column;
+        justify-content: center;
+        height: 250px;
+        
+
+        &__title{
+            font-size: 22px;
+            text-align: center;
+            width: 70%;
+            margin: auto;
+            margin-bottom: 14px;
+            
+        }
+
+        &__text{
+            font-weight: 300;
+            font-size: 15px;
+            text-align: center;
+            padding:10px;
+            
+        }
+
+        &__btn{
+            width: 190px;
+            padding: 14px;
+            margin-top: 20px;
+            & a{
+                color: white;
+            }
+            
+            
+
+            
+        }
+    }
+
+// The "location" icon, for priority purpose //
+}
+#research-icon{
+    line-height: 42px;
+    color:$color-adress;
+}
+
+.working{
+    @include flex-column;
+    padding:40px 0px 40px 0px;
+    @include desktop-only{
+        padding: 0;
+        padding-bottom: 40px;
+    }
+
+    &__title{
+        font-size: 24px;
+        margin-bottom: 20px;
+        margin-left: 14px;
+        @include desktop-only{
+            margin-left: 0;
+        }
+    }
+
+    &__box{
+        @include flex-column;
+        width: 85%;
+        margin:auto;
+        
+        @include desktop-only{
+            flex-direction: row;
+            justify-content: space-around;
+            width: 100%;
+        
+        }
+        @include tab-only{
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+
+        &__li{
+            background-color: $color-grey-2;
+            padding: 22px;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 22px;
+            position: relative;
+            text-align: center;
+            cursor: pointer;
+            @include desktop-only{
+            width: 260px;
+            }
+            @include tab-only{
+                width: 260px
+            }
+            @include main-shadow;
+            transition: transform 240ms;
+            &:hover{
+                @include desktop-only{
+                    transform: scale(1.2);
+                }
+                @include purple-back;
+                & i{
+                    color: $color-primary;
+                }
+            }
+            & span{
+                position: absolute;
+                left: -8px;
+                display:inline-block;
+                background-color: $color-primary;
+                color: white;
+                border: 0 solid wheat;
+                border-radius: 12px;
+                width: 18px;
+                height: 18px;
+                text-align: center;
+                font-size: 12px;
+                line-height: 18px;
+            }
+            & i{
+                color:grey;
+                position: absolute;
+                left: 30px;
+            }
+            
+
+            
+        }
+    }
+}
+
+.main-box{
+    background-color: $color-grey-2;
+    @include flex-column;
+    &__title{
+        margin-left: 20px;
+        padding-top: 50px;
+    }
+    @include desktop-only{
+        border-radius:0px 0px 16px 16px;
+    }
+    &__sub-box{
+        @include flex-column;
+        padding: 30px 0px 30px 0px;
+
+        @include tab-only{
+            @include flex-row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            
+        }
+        @include desktop-only{
+            @include flex-row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+}
+
+
+
+.main-card{
+    @include flex-column;
+    @include main-shadow;
+    align-self: center;
+    margin-bottom: 30px;
+    width: 90%;
+    height: 240px;
+    background-color: white;
+    border-radius: 16px;
+    position: relative;
+
+    // ANIMATION A ENLEVER //
+    @include desktop-only{
+        transition: transform 0.2s ease-in-out;
+        &:hover{
+            transform:scale(1.05);
+            animation: card-rotate 280ms ease-in-out;
+        }
+    }
+    @include tab-only{
+        width: 40%;
+        margin: auto;
+        margin-top:20px;
+    }
+    @include desktop-only{
+        width: 40%;
+        max-width: 600px;
+        margin: auto;
+        margin-top: 20px;
+    }
+    
+
+    & a{
+        width: 100%;
+    }
+    &__img{
+        width: 100%;
+        object-fit: cover;
+        object-position: 10% 60%;
+        border-radius: 16px 16px 0px 0px;
+        height: 170px;
+        @include desktop-only{
+            object-position: 40% 65%;
+        }
+    }
+
+    &__box{
+        @include flex-row;
+        justify-content: space-between;
+        width:100%;
+        padding: 10px 20px 10px 10px;
+        
+        & .heart-like{
+            line-height: 40px;
+            cursor: pointer;
+        }
+        &__like{
+            
+            &:hover{
+                @include heart-like;
+
+            }
+                        
+        }   
+    }
+
+    &__text-box{
+        
+    }
+
+    &__title{
+        font-size: 17px;
+    }
+
+    &__title-2{
+        font-size: 16px;
+        font-weight: 300;
+        margin-top: 5px;
+    }
+
+    &__new{
+        background-color: $color-tertiary;
+        position:absolute;
+        right: 12px;
+        top:14px;
+        padding:6px 10px 6px 10px;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 2px;
+        color: darken($color-tertiary, 40%);
+    }
+    
+}
+
+.footer{
+    @include flex-column;
+    background-color: rgb(56, 56, 56);
+    padding: 20px 0px 26px 24px;
+    @include desktop-only{
+        padding-left: 100px;
+    }
+    &__title{
+        color: white;
+        font-family: Shrikhand;
+        font-weight: 400;
+        font-size: 18px;
+    }
+    &__ul{
+        padding-top: 18px;
+    }
+
+    &__li{
+        font-size: 15px;
+        padding-bottom: 6px;
+        & a{
+        color: white;
+        &:hover{
+            color: $color-primary;
+        }
+        &:hover > i{
+            color: $color-primary;
+        }
+        }
+    }
+
+    &__icon{
+        display: inline-block;
+        width:6px;
+        padding-right: 16px;
+        color: white;
+    }
+}
+
+//------------------- LOADER ----------------//
+.loader {
+    position: fixed;
+    top:50%;
+    left: 50%;
+    margin-left: -50px;
+    border-left:0px;
+    border-right:0px;
+    border-top: 16px solid $color-primary;
+    border-bottom: 16px solid $color-secondary;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s ease-in-out 1;
+    opacity: 0;
+    width:0;
+  }

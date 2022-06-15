@@ -86,6 +86,7 @@
         font-weight: 400;
         font-size: 16px;
         padding-bottom: 4px;
+        text-transform: uppercase;
     }
     
 
@@ -106,9 +107,11 @@
 
         &__text-and-price{
             @include flex-row;
-            padding-top: 2px;
-            position:relative;
-            width:90%;
+            width:100%;
+            flex-basis: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px;
             transition: width 600ms;
             &:hover + .menu__box__check{
                 transform: translateX(0px);
@@ -119,7 +122,7 @@
                 margin-right: 0px;
             }
             &:hover > .menu__box__price{
-                padding-right: 80px;
+                padding-right: 50px;
             }
 
         }
@@ -127,17 +130,13 @@
             display: block;
             color:$color-adress;
             font-size: 15px;
-            padding-left:20px;
-            line-height: 100px;
+            align-self: end;
+            transition: padding 400ms ease-in-out;
 
         }
         &__text-box{
             @include flex-column;
-            padding-top: 10px;
-            padding-bottom: 12px;
-            padding-left: 12px;
             width: 70%;
-            height: 68px;
 
             &__title{
                 font-weight: 550;
