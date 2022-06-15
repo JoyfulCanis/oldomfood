@@ -14,14 +14,6 @@
     opacity: 1;
   }
 }
-@keyframes like {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -39,6 +31,14 @@
     transform: rotate(720deg);
     opacity: 0;
     width: 120px;
+  }
+}
+@keyframes like {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .fade-in__1 {

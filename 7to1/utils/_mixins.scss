@@ -4,7 +4,7 @@
 @mixin purple-back{
     background: linear-gradient( #9256dc25 100%, white)
 }
-
+//flex//
 @mixin flex-column {
     display: flex;
     flex-direction: column;
@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: row;
 }
-
+//shadows//
 @mixin main-shadow {
     box-shadow: 2px 6px 6px rgba(0, 0, 0, 0.175);
 }
@@ -22,7 +22,7 @@
 @mixin sub-shadow {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.07);
 }
-
+//media//
 @mixin tab-only {
     @media screen and (min-width: map-get($breakpoints, tab)) and (max-width:map-get($breakpoints, desktop)){
         @content;
@@ -34,7 +34,7 @@
         @content;
     }
 }
-
+//heart transition //
 @mixin heart-like {
     display: initial;
     font-weight: 900;

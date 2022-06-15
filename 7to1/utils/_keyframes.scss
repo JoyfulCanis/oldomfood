@@ -1,3 +1,4 @@
+//loader & effects//
 .index-load{
     opacity: 1;
     animation: index-load 1.8s linear;
@@ -8,20 +9,20 @@
     99.99%{opacity: 0;}
     100%{opacity: 1;}
  }
- 
+
+ @keyframes spin {
+   0% { transform: rotate(0deg); opacity: 1; width: 120px;}
+   50%{transform: rotate(360deg); opacity: 1;}
+   60%{transform: rotate(380deg);}
+   100% {transform: rotate(720deg); opacity: 0; width: 120px;}
+}
+ //heart animation  (the transition is written in the mixins file)//
  @keyframes like {
     from {opacity: 0;}
     to {opacity: 1;}
  }
- 
- @keyframes spin {
-    0% { transform: rotate(0deg); opacity: 1; width: 120px;}
-    50%{transform: rotate(360deg); opacity: 1;}
-    60%{transform: rotate(380deg);}
-    100% {transform: rotate(720deg); opacity: 0; width: 120px;}
- }
- 
- 
+
+ //menu fade in//
  @for $i from 1 through 10{
     .fade-in__#{$i}{
        animation: fade-in 1s forwards $i * 0.15s;
@@ -40,12 +41,12 @@
        opacity: 1;
     }
  }
- 
+ //check icon rotation//
  @keyframes rotate-check {
     0%{transform: rotate(0deg);}
     100%{transform: rotate(360deg);}
  }
- 
+ //card shake//
  @keyframes card-rotate {
     0%{transform: rotate(0deg);}
     25%{transform: rotate(-5deg);}
