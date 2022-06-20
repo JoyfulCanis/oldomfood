@@ -180,9 +180,8 @@
             top:30px;
             margin-right: -57px;
             transition: margin-right 650ms ease-in-out;
-            @include desktop-only{
-                line-height: 10px;
-            }
+            line-height: 10px;
+
             
         }
         

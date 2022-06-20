@@ -14,14 +14,6 @@
     opacity: 1;
   }
 }
-@keyframes like {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -39,6 +31,14 @@
     transform: rotate(720deg);
     opacity: 0;
     width: 120px;
+  }
+}
+@keyframes like {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .fade-in__1 {
@@ -205,7 +205,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 250px;
+  height: auto;
 }
 .research__explorer__title {
   font-size: 22px;
@@ -213,6 +213,7 @@ a {
   width: 70%;
   margin: auto;
   margin-bottom: 14px;
+  margin-top: 50px;
 }
 .research__explorer__text {
   font-weight: 300;
@@ -227,6 +228,10 @@ a {
 }
 .research__explorer__btn a {
   color: white;
+}
+.research #explorer-btn-container {
+  text-align: center;
+  padding-bottom: 50px;
 }
 
 #research-icon {
@@ -705,11 +710,7 @@ a {
   top: 30px;
   margin-right: -57px;
   transition: margin-right 650ms ease-in-out;
-}
-@media screen and (min-width: 992px) {
-  .menu__box__check-icon {
-    line-height: 10px;
-  }
+  line-height: 10px;
 }
 
 .order-btn {

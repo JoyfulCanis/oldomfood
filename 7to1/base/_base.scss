@@ -52,7 +52,7 @@
         background-color: $color-grey-2;
         @include flex-column;
         justify-content: center;
-        height: 250px;
+        height: auto;
         
 
         &__title{
@@ -61,6 +61,7 @@
             width: 70%;
             margin: auto;
             margin-bottom: 14px;
+            margin-top: 50px;
             
         }
 
@@ -85,7 +86,11 @@
             
         }
     }
-
+// button container for priority purpose //
+#explorer-btn-container{
+    text-align: center;
+    padding-bottom: 50px; 
+}
 // The "location" icon, for priority purpose //
 }
 #research-icon{
