@@ -33,6 +33,7 @@ a{
    transition: transform 0.2s ease-in-out;
    &:hover{
       transform:scale(1.2) ;
+      background: linear-gradient(#9460d3, #ff87dd);
    }
    
 }
