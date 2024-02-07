@@ -1,0 +1,15 @@
+cd ..
+mkdir
+touch
+git branch (montrer les branches)
+git branch qlqchoz (créer une branche)
+git checkout qlqchoz (aller vers cette branche)
+git merge qlqchoz (branche + branche qlqchoz)
+git clone ADRESSENET
+
+
+./osef/sass  style.SCSS style.css --watch
+
+
+SURTOUT COMMENCER PAR GIT !!!
+ pro

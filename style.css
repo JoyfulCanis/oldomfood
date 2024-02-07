@@ -99,20 +99,6 @@
     transform: rotate(360deg);
   }
 }
-@keyframes card-rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-5deg);
-  }
-  75% {
-    transform: rotate(5deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
 * {
   margin: 0;
   font-family: Roboto;
@@ -148,6 +134,7 @@ a {
 }
 .all-btn:hover {
   transform: scale(1.2);
+  background: linear-gradient(#9460d3, #ff87dd);
 }
 
 .header {
@@ -205,7 +192,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 250px;
+  height: auto;
 }
 .research__explorer__title {
   font-size: 22px;
@@ -213,6 +200,7 @@ a {
   width: 70%;
   margin: auto;
   margin-bottom: 14px;
+  margin-top: 50px;
 }
 .research__explorer__text {
   font-weight: 300;
@@ -227,6 +215,10 @@ a {
 }
 .research__explorer__btn a {
   color: white;
+}
+.research #explorer-btn-container {
+  text-align: center;
+  padding-bottom: 50px;
 }
 
 #research-icon {
@@ -384,7 +376,6 @@ a {
   }
   .main-card:hover {
     transform: scale(1.05);
-    animation: card-rotate 280ms ease-in-out;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
@@ -705,11 +696,7 @@ a {
   top: 30px;
   margin-right: -57px;
   transition: margin-right 650ms ease-in-out;
-}
-@media screen and (min-width: 992px) {
-  .menu__box__check-icon {
-    line-height: 10px;
-  }
+  line-height: 10px;
 }
 
 .order-btn {

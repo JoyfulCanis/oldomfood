@@ -99,20 +99,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes card-rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-5deg);
-  }
-  75% {
-    transform: rotate(5deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
+
 * {
   margin: 0;
   font-family: Roboto;
@@ -390,7 +377,7 @@ a {
   }
   .main-card:hover {
     transform: scale(1.05);
-    animation: card-rotate 280ms ease-in-out;
+
   }
 }
 @media screen and (min-width: 768px) and (max-width: 992px) {
